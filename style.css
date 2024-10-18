@@ -1,7 +1,149 @@
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  color: black;
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+height: 100%;
+}
+
+
 html, body, p {
-    font-family: "Roboto", system-ui;
-    margin: 0;
-    padding: 0;
+  font-family: "Verdana";
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px;
+}
+
+nav {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-evenly;
+  flex-grow: 2;
+}
+
+nav a {
+  width: 75px;
+}
+
+.hamburger {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+h1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+article h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  align-self: flex-end;
+  margin: 0px;
+  height: 50px;
+  width: 50%;
+  font-size: 1.5em;
+  background-color: lightgray;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+
+#logo {
+  width: 75px;
+  height: 75px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.flex-container > article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  flex: 1;
+  margin: 15px;
+  border-style: solid;
+  border-width: 2px;
+
+}
+
+.flex-container > article > p {
+  text-align: justify;
+  padding: 15px;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 15px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100px;
+  background-color: lightgray;
+  border-top: 2px solid black;
+  margin-top: 15px;
+}
+
+footer #drugi {
+  font-weight: bold;
+}
+
+
+@media all and (max-width: 900px) {
+  main {
+      flex-wrap: wrap;
+       }
   }
 
+  @media all and (max-width: 676px) {
+    .logo, header h1, nav {
+      display: none;
+    }
 
+    .hamburger {
+      display: block;
+    }
+
+    header {
+      justify-content: space-between;
+    }
+
+    }
